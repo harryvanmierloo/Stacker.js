@@ -21,7 +21,7 @@ Include the `stacker.css` and `stacker.js` files in the `<head>`-section of your
 </html>
 ```
 
-From your Javascript, initiate a chart like using a reference to the SVG source element, in line with the example below:
+From your Javascript, initiate a chart using a reference to the SVG source element, in line with the example below:
 
 ```javascript
 var data       = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
