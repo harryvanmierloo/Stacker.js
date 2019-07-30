@@ -1,5 +1,5 @@
 # stacker.js
-Stacker.js is a very light-weight and standalone libary for visualizing fix-height area charts.
+Stacker.js is a very light-weight and standalone libary for visualizing fixed height area charts.
 
 ![Screenshot](/screenshot.png?raw=true "Screenshot of Stacker.js")
 
