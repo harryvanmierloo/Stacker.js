@@ -1,6 +1,6 @@
 const yRange = 100;
 const layerCount = 5;
-const noise = 0.05 * yRange;
+const noise = 0.02 * yRange;
 
 var data1 = generateRandomList(100, yRange);
 var data2 = generateSineList(100, yRange, noise);
@@ -12,9 +12,9 @@ document.onreadystatechange = () => {
 };
 
 function init() {
-  var chart1 = new RenderChart(data1, document.getElementById("chart1"), layerCount, yRange);
-  var chart2 = new RenderChart(data2, document.getElementById("chart2"), layerCount, yRange);
-  var chart3 = new RenderChart(data2, document.getElementById("chart3"), layerCount, yRange);
+  var chart1 = new Stacker(data1, document.getElementById("chart1"), layerCount, yRange);
+  var chart2 = new Stacker(data2, document.getElementById("chart2"), layerCount, yRange);
+  var chart3 = new Stacker(data2, document.getElementById("chart3"), layerCount, yRange);
 }
 
 function generateRandomList(amount, max) {

@@ -6,7 +6,7 @@
  * Released under the MIT license
  */
 
-function RenderChart(data, sourceElement, layers, yMax) {
+function Stacker(data, sourceElement, layers, yMax) {
 
   // Init chart
   var width = sourceElement.clientWidth,
@@ -122,4 +122,7 @@ function RenderChart(data, sourceElement, layers, yMax) {
     };
     console.log(debugText);
   }
+
+  // Let users destroy this thing
+  // TODO: this.destroy = 
 }
