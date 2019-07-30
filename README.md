@@ -5,14 +5,30 @@ Stacker.js is a very light-weight and standalone libary for visualizing fixed he
 
 ## Usage
 
-Include the `stacker.css` and `stacker.js` files in the `<head>`-section of your HTML as usual and add a SVG-element to the desired location of your website. Then from your Javascript, initiate a chart like using a reference to the SVG source element, in line with the example below:
+Include the `stacker.css` and `stacker.js` files in the `<head>`-section of your HTML as usual and add a SVG-element to the desired location of your website. 
+
+```html
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/PATH/TO/stacker.css">
+    <script src="/PATH/TO/stacker.js"></script>
+  </head>
+
+  <body>
+    <svg id="my-stacker"></svg>
+  </body>
+
+</html>
+```
+
+From your Javascript, initiate a chart like using a reference to the SVG source element, in line with the example below:
 
 ```javascript
 var data       = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
     layerCount = 5,
     yRange     = 100;
     
-var chart = new Stacker(data, document.getElementById("#id-of-svg"), layerCount, yRange);
+var chart = new Stacker(data, document.getElementById("#my-stacker"), layerCount, yRange);
 ```
 
 ## Next steps
