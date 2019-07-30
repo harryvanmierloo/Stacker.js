@@ -5,7 +5,7 @@ Stacker.js is a very light-weight and standalone libary for visualizing fixed he
 
 ## Usage
 
-Include the `stacker.css` and `stacker.js` files in the `<head>`-section of your HTML as usual and add a SVG-element to the desired location of your website. 
+Include the `stacker.css` and `stacker.js` files in the `<head>`section of your HTML as usual and add a SVG-element to the desired location of your website. 
 
 ```html
 <html>
