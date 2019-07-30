@@ -1,30 +1,11 @@
 <html>
   <head>
-    <script src="../stacker.js"></script>
-    <script src="main.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="../stacker.css">
+    
     <style>
       body {
         margin: 1rem;
       }
-
-      .chart {
-        background: white;
-        border: 1px solid lightgrey;
-        border-radius: 0.25rem;
-        height: 8rem;
-        margin-bottom: 1rem;
-        width: 100%;
-      }
-
-      .chart {
-        pointer-events: fill; // ISSUE
-      }
-
-      .chart path {
-        fill: black;
-      }
-
       #chart1 path {
         fill: blue;
       }
@@ -36,33 +17,22 @@
       #chart3 path {
         fill: green;
       }
-
-      .chart text {
-        fill: black;
-        font: 10px sans-serif;
-        text-anchor: end;
+      .stacker {
+        margin-bottom: 1rem;
+        height: 8rem;
       }
-
-      .chart path {
-        mix-blend-mode: multiply;
-        transition: all 0.3s ease;
-        shape-rendering: crispEdges;
-      }
-
-      /*.chart path:hover {
-        opacity: 1;
-        cursor: pointer;
-        stroke: black;
-        stroke-width: 1px;
-      }*/
-
     </style>
+
+    <script src="../stacker.js"></script>
+    <script src="main.js"></script>
+
+
   </head>
 
   <body>
-    <svg class="chart" id="chart1"></svg>
-    <svg class="chart" id="chart2"></svg>
-    <svg class="chart" id="chart3"></svg>
+    <svg id="chart1"></svg>
+    <svg id="chart2"></svg>
+    <svg id="chart3"></svg>
   </body>
 
 </html>

@@ -1,0 +1,22 @@
+.stacker {
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 0.25rem;
+  height: 100%;
+  width: 100%;
+}
+
+.stacker path {
+  fill: black;
+}
+
+.stacker text {
+  fill: black;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.stacker path {
+  mix-blend-mode: multiply;
+  shape-rendering: crispEdges;
+}

@@ -8,6 +8,9 @@
 
 function Stacker(data, sourceElement, layers, yMax) {
 
+  // Add specific stacker class
+  sourceElement.classList.add("stacker");
+
   // Init chart
   var width = sourceElement.clientWidth,
       height = sourceElement.clientHeight,
