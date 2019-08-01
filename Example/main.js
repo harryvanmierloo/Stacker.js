@@ -15,6 +15,7 @@ function init() {
   var chart1 = new Stacker(data1, document.getElementById("chart1"), layerCount, yRange);
   var chart2 = new Stacker(data2, document.getElementById("chart2"), layerCount, yRange);
   var chart3 = new Stacker(data2, document.getElementById("chart3"), layerCount, yRange);
+  var chart4 = new Stacker(data2, document.getElementById("chart4"), layerCount, yRange);
 }
 
 function generateRandomList(amount, max) {
