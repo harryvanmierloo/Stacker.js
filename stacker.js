@@ -27,11 +27,16 @@ function Stacker(data, sourceElement, layers, yMax) {
   // TODO: Add destroy method
 
   // Init line
-  var line = document.createElementNS("http://www.w3.org/2000/svg", 'line');
+  var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
   sourceElement.appendChild(line);
 
-  var text = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+  var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
   sourceElement.appendChild(text);  
+
+  var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  dot.setAttribute("r", 4);
+  dot.setAttribute("visibility", "hidden");
+  sourceElement.appendChild(dot);
 
   // Add event listener to detect mouseover events
   sourceElement.addEventListener("mousemove", redrawLine);
@@ -78,24 +83,36 @@ function Stacker(data, sourceElement, layers, yMax) {
   function redrawLine(event) {
     var loc = cursorPoint(event);
 
+    // Get correct value
+    let xValue = Math.round(loc.x / width * (data.length - 1));
+    let yValue = Math.round(data[xValue]*10) / 10;
+
+    // Calculate dotY
+    let dotY = 0;
+    let singleLayer = yMax / layers;
+    var dotOffset = 0;
+    for (var i = 0; i < layers; i++) {
+      if (yValue - i * singleLayer >= 0) {
+        dotOffset = (i + 1) * singleLayer;
+      }
+    }
+    dotY = (dotOffset - yValue) * height / singleLayer;
+
     // Update line
     line.setAttribute("x1", loc.x);
     line.setAttribute("y1", 0);
     line.setAttribute("x2", loc.x);
     line.setAttribute("y2", "100%");
-    line.setAttribute("stroke", "black");
-    line.setAttribute("stroke-width", 1);
-
-    // Get correct value
-    // console.log(event.clientX);
-    
-    let xValue = Math.round(loc.x / width * (data.length - 1));
-    let yValue = Math.round(data[xValue]*10)/10;
 
     // Update text
     text.setAttribute("x", loc.x - 5);
-    text.setAttribute("y", 10);
+    text.setAttribute("y", 15);
     text.textContent = yValue;
+
+    // Upddate dot
+    dot.setAttribute("visibility", "visible");
+    dot.setAttribute("cx", loc.x);
+    dot.setAttribute("cy", dotY);
   }
 
   function xScale(x) {

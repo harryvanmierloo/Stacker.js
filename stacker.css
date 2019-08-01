@@ -8,15 +8,22 @@
 
 .stacker path {
   fill: #6666cc;
+  mix-blend-mode: multiply;
+  shape-rendering: crispEdges;
+}
+
+.stacker line {
+  stroke: #1e1a34;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
 }
 
 .stacker text {
-  fill: black;
+  fill: #1e1a34;
   font: 10px sans-serif;
   text-anchor: end;
 }
 
-.stacker path {
-  mix-blend-mode: multiply;
-  shape-rendering: crispEdges;
+.stacker circle {
+  fill: #1e1a34;
 }
