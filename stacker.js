@@ -78,6 +78,7 @@ function Stacker(data, sourceElement, layers, yMax) {
     updateChart();
     sourceElement.appendChild(line);
     sourceElement.appendChild(text);
+    sourceElement.appendChild(dot);
   };
 
   function redrawLine(event) {
